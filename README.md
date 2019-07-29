@@ -8,4 +8,4 @@
 
 3 - (Opcional) tenha o `nodemon` instalado globalmente - o comando para fazer isso eh: `npm install -g nodemon` (Lembrando que precisar ter o acesso de administrador)
 
-4 - npm start (Inicializara o app automaticamente, por padrao a url se encontrara como http://localhost:8888/)
+4 - `npm start` (Inicializara o app automaticamente, por padrao a url se encontrara como http://localhost:8888/)
