@@ -31,14 +31,28 @@
       </div>
     </form>
 
-    <br/><hr/>
+    <br />
+    <hr />
 
-    <form class="form-group" action='/generateFileJson' method='get'>
-      <h2>Gerar novo JSON com a mensagem decifrada e resumo criptografico</h2>
-      <f class="row col-md-12 mt-4">
-          <button type="submit" class="btn btn-success">Gerar</button>
-      </form>
+    <form class="form-group" action='/generateFileJsonCipher' method='get'>
+      <h2>Gerar novo JSON com a mensagem cifrada e resumo criptografico cifrado</h2>
+      <div class="row col-md-12 mt-4">
+        <button type="submit" class="btn btn-success">Cifrar</button>
+      </div>
     </form>
+
+    <br />
+    <hr />
+
+    <form class="form-group" action='/generateFileJsonDecipher' method='get'>
+      <h2>Gerar novo JSON com a mensagem decifrada e resumo criptografico decifrado</h2>
+      <div class="row col-md-12 mt-4">
+        <button type="submit" class="btn btn-danger">Decifrar</button>
+      </div>
+    </form>
+
+
+
   </div>
 
   <!-- Optional JavaScript -->

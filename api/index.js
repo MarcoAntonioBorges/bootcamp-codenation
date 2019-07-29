@@ -23,8 +23,17 @@ router.post('/upload', function (req, res) {
   }
 })
 
-router.get('/generateFileJson', (req, res) => {
-  gerarArquivo().then(resp => {
+router.get('/generateFileJsonCipher', (req, res) => {
+  gerarArquivo.cipher().then(resp => {
+    res.send(resp)
+  }).catch((err)=>{
+    console.log(err)
+    res.send('Erro ao gerar o arquivo')
+  })
+})
+
+router.get('/generateFileJsonDecipher', (req, res) => {
+  gerarArquivo.decipher().then(resp => {
     res.send(resp)
   }).catch((err)=>{
     console.log(err)
