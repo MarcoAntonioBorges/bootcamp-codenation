@@ -15,7 +15,12 @@ app.use(upload())
 app.get('/', function (req, res) {
   res.send(`
     <h1>Fazer upload do Arquivo answer.json</h1>
-    <form action="https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=e04f0f8009981bb922cd0af85a07de3725f7ef07" method="post" enctype="multipart/form-data">
+    <!-- 
+      Para enviar uma requisicao para a API do Codenation voce precisara de um cadastro na plataforma deles e pegar o seu TOKEN.
+      Vc substituira o action do form que esta como '/' para https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=SEU_TOKEN
+      e pronto estara funcionando.
+    -->
+    <form action="/" method="post" enctype="multipart/form-data">
       <input type="file" name="answer" id="answer">
       <input type="submit" value="Upload" name="submit">
     </form>
@@ -35,7 +40,6 @@ app.post('/', function (req, res) {
     file.mv('./upload/' + filename, function (err) {
       if (err) {
         console.log(err)
-        console.log(err)
         res.send('Erro ao fazer upload')
       } else {
         res.send('Upload com sucesso')
@@ -49,11 +53,6 @@ app.get('/generateFileJson', (req, res) => {
     res.send(resp)
   })
 })
-
-app.listen(port, () => {
-  console.log(`Server rodando aqui: http://${localhost}:${port}`)
-})
-
 
 function generateFileJson() {
   return new Promise((resolve, reject) => {
@@ -101,3 +100,7 @@ function getTextDecifrado(alphabet, numero_casas, cifrado) {
   }
   return retorno
 }
+
+app.listen(port, () => {
+  console.log(`Server rodando aqui: http://${localhost}:${port}`)
+})
