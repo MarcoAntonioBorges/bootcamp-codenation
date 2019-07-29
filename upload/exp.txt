@@ -1,0 +1,1 @@
+Nesse diretorio vem o arquivo que sera gerado, automaticamente, vindo com um objeto JSON com todos os campos preenchidos.
